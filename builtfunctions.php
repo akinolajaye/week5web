@@ -3,7 +3,7 @@ $messgae = "PHP can be embedded into HTML.";
 $num = 5;
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>
 Built-in Functions
