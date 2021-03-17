@@ -41,9 +41,10 @@ td:hover{
 
 <body>
 <!-- two rows of numbers using HTML  --> 
-<table class="table">
+<table class="table" >
+<caption>table</caption>
   <tr>
-	<th class="head">Heading 1</th><th class="head">Heading 2</th><th class="head">Heading 3</th>
+	<th class="head">Heading 1</th> <th class="head">Heading 2</th> <th class="head">Heading 3</th>
   </tr>
   <tr>
     <td class="cell1">1</td><td class="cell1">1</td><td class="cell1">1</td>
@@ -58,8 +59,21 @@ td:hover{
 <table class="table">
 <tr>
 	<th class="head">Heading 1</th><th class="head">Heading 2</th><th class="head">Heading 3</th>
+
 </tr>
 <?php
+
+  for($i=1;$i<=10;$i++){
+    echo '<tr>';
+
+
+      echo '<td class= "cell1"  >'.$i. '</td>';
+      echo '<td class= "cell2"  >'.$i. '</td>';
+      echo '<td class= "cell1"  >'.$i. '</td>';
+
+    echo '</tr>';
+
+  }
 
 ?>
 
@@ -69,15 +83,19 @@ td:hover{
 
 <!-- Task2: use PHP to create 10x10 multiplication table --> 
 <table class="table">
+<caption>table</caption>
+<th class="head" colspan="10" >10x10</th>
 <?php
 $NumRows=10;
 for($i=1;$i<=$NumRows;$i++){
-	echo '<tr>';
-		
-    		echo '<td class="cell1">'.$i.'</td>';
+  echo '<tr>';
+    
+    for($j=1;$j<=$NumRows;$j++){
+      echo '<td class="cell1">'.$i*$j.'</td>';
+    }
 
-	echo '</tr>';
-}
+  echo '</tr>';
+  }
 ?>
 </table>
 
